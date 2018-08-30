@@ -1,0 +1,55 @@
+%!TEX program = xelatex
+%使用xelatex,使用unicode,对中文支持的最好.记得文档另存为uft-8格式.
+
+\documentclass[10pt,a4paper,titlepage]{article} %默认字体大小,页面大小(a4),标题单独一页
+\usepackage{fontspec}   %引入设置字体的包
+\usepackage{xeCJK}  %使用中文环境的包,还有一个是CJK,未知
+
+\setmainfont{Times New Roman}   %英文字体
+\setCJKmainfont[BoldFont=MicrosoftYaHei]{MicrosoftYaHei}      %中文字体`'
+
+
+\title{资源管理器概要设计}
+\author{作者：闫思维}
+\date{2018.8.30}
+
+\begin{document}
+	\maketitle
+	\newpage
+
+	\begin{flushleft}
+	\section{概述（Introduction)}
+		\subsection{目的(Purpose)}
+		本文主要是TVOS中间间的子模块资源管理器模块的概要设计，重点描述了如何
+		通过资源管理器使用，管理独占的硬件资源，以满足PIP等多个播放器同时播放
+		的需求场景。
+		\subsection{范围(Scope)}
+		本文主要包括RM的接口设计及使用场景设计，由于模块本身较小，实现较简
+		单，不再做内部分解设计。
+		\subsection{略略语(Acronyms \& Definaitions)}
+		\begin{tabular}{|c|c|c|}
+		\hline
+		缩略语&英文&中文解释\\
+		\hline
+		TVOS&TVOS&TCL智能电视中间件系统\\
+		\hline
+		RM&Resource Manager&资源管理器，TVOS中间件的子模块。\\
+		\hline
+		\end{tabular}
+
+		\subsection{参考(References)}
+		SITA中间件概要设计DTVM中间件规范
+		\subsection{发布范围}
+		\begin{tabular}{|c|c|p{150pt}|c|}
+		\hline
+		序号&持有人角色&持有人姓名&发布日期\\
+		\hline
+		1&作者&李辉&2016.7.6\\
+		\hline
+		2&初评&樊二锋、赵德民、罗阳志、路惠明、付勇、林舜大、黄高波等&2016.7.8\\
+		\hline
+		\end{tabular}
+		\newpage
+	\end{flushleft}
+
+\end{document}
